@@ -13,18 +13,9 @@ def suma(num1,num2):
 def prom(sumado,cant):
     return sumado/cant
   
-def comprNota(parcial):
-    return False if ((parcial < 0) or (parcial > 10 )) else True
-
-def ingr_nota(arg):
-
-    parcial = ing_float(arg)
-    
-    while not comprNota(parcial):
-        print("Nota incorrecta, por favor ingrese nuevamente: ")
-        parcial = ing_float("Ingrese la nota del primer parcial: ")
-    
-    return parcial
+def ingreso(arg):
+    cons = ing_float(arg) 
+    return cons if(0 <= cons <= 10) else ingreso("Datos erroneos, ingrese nuevamente: ")
 
 def def_estado(prom): 
     match prom:
@@ -37,8 +28,8 @@ def def_estado(prom):
 
 def p_NotaFinal():
 
-   parcial1 = ingr_nota("Ingrese la nota del primer parcial: ")
-   parcial2 = ingr_nota("Ingrese la nota del segundo parcial: ")
+   parcial1 = ingreso("Ingrese la nota del primer parcial: ")
+   parcial2 = ingreso("Ingrese la nota del segundo parcial: ")
    promedio = prom(suma(parcial1,parcial2),2)
    def_estado(promedio)
 

@@ -9,8 +9,12 @@ def ing_float(arg):
 def salida(pago):
     print("El cliente debe pagar:",pago)
 
+def ingreso(arg):
+    cons = ing_float(arg) 
+    return cons if(0 < cons) else ingreso("Datos erroneos, ingrese nuevamente: ")
+
 def p_desc():
-    pago = ing_float("Ingrese el precio: ")
+    pago = ingreso("Ingrese el precio: ")
     
     if pago > 200:
         salida(pago*0.8)

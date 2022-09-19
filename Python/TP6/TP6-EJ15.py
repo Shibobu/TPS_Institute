@@ -16,16 +16,9 @@ Tipo 7 – Obesidad Mórbida Más de 40
 def ing_float(arg):
     return float(input(arg))
 
-def comp_pos(num):
-    return False if(num < 0) else True
-
-def cont_float(arg):
-    float = ing_float(arg)
-
-    while not comp_pos(float):
-        float = ing_float("Datos erroneos, ingrese nuevamente: ")
-    
-    return float
+def ingreso(arg):
+    cons = ing_float(arg) 
+    return cons if(cons > 0) else ingreso("Datos erroneos, ingrese nuevamente: ")
 
 def mat_IMC(imc):
     match imc:
@@ -45,8 +38,8 @@ def mat_IMC(imc):
             print("Obesidad Morbida")
 
 def p_IMC():
-    peso = cont_float("Ingrese el peso de la persona: ")
-    estatura = cont_float("Ingrese la estatura de la persona: ")
+    peso = ingreso("Ingrese el peso de la persona: ")
+    estatura = ingreso("Ingrese la estatura de la persona: ")
     IMC= peso/ pow(estatura,2)
     mat_IMC(IMC)
 

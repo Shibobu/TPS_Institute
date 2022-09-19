@@ -11,24 +11,13 @@ def ing_int(arg):
 def ing_float(arg):
     return float(input(arg))
 
-def comp_pos(num):
-    return False if(num < 0) else True
+def ingreso_int(arg):
+    num = ing_int(arg)
+    return num if(num>0) else ingreso_int("Datos erroneos, Ingrese nuevamente: ")
 
-def cont_ingr(arg):
-    N = ing_int(arg)
-
-    while not comp_pos(N):
-        N = ing_int("Datos erroneos, ingrese nuevamente: ")
-    
-    return N
-
-def cont_precio(arg):
-    precio = ing_float(arg)
-
-    while not comp_pos(precio):
-        precio = ing_float("Datos erroneos, ingrese nuevamente: ")
-    
-    return precio
+def ingreso(arg):
+    cons = ing_float(arg) 
+    return cons if(cons > 0) else ingreso("Datos erroneos, ingrese nuevamente: ")
 
 def descuento(total,perc):
     return (total*(1-perc/100))
@@ -46,8 +35,8 @@ def match_disc(total):
             salida(descuento(total,15))
             
 def p_descuentos():
-    N = cont_ingr("Ingrese la cantidad de productos que lleva el cliente: ")
-    P = cont_precio("Ingrese el precio de los productos: ")
+    N = ingreso_int("Ingrese la cantidad de productos que lleva el cliente: ")
+    P = ingreso("Ingrese el precio de los productos: ")
     total = P*N
     match_disc(total)
 
