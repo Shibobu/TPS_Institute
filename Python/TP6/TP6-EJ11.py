@@ -28,11 +28,11 @@ def ingr_nota(arg):
 
 def def_estado(prom): 
     match prom:
-        case prom if((prom >= 0) & (prom < 4)):
+        case prom if(0 >= prom < 4):
             print("El estado del alumno es Libre")
-        case prom if((prom >= 4) & (prom < 7)):
+        case prom if(4 >= prom < 7):
             print("El estado del alumno es Regular")
-        case prom if((prom >= 7) & (prom <= 10)):
+        case prom if(7 >= prom < 10):
             print("El estado del alumno es Promocionado")
 
 def p_NotaFinal():

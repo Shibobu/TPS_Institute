@@ -40,7 +40,7 @@ def match_disc(total):
     match total:
         case total if (total < 50):
             salida(total)
-        case total if ((total >= 50) & (total < 150)):
+        case total if (50 <= total < 150):
             salida(descuento(total,12.25))
         case total if (total >= 150):
             salida(descuento(total,15))

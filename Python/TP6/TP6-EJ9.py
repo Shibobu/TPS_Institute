@@ -28,9 +28,9 @@ def p_descXKilo():
         kg = compPos()
 
     match kg:
-        case kg if ((kg > 2)&(kg <=5)):
+        case kg if ((2 < kg <=5)):
             total = precio * descuento(10)
-        case kg if ((kg >5) & (kg <=10)):
+        case kg if (5 < kg <= 10 ):
             total = precio * descuento(15)
         case kg if (kg > 10):
             total = precio * descuento(20)

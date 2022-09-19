@@ -31,9 +31,9 @@ def mat_IMC(imc):
     match imc:
         case imc if imc <= 17:
             print("Infrapeso")
-        case imc if((imc >17) & (imc <= 18)):
+        case imc if(17<imc<=18):
             print("Bajo peso")
-        case imc if((imc > 18 ) & (imc <25)):
+        case imc if(18<imc<=25):
             print("Peso normal")
         case imc if (25<imc<=30):
             print("Obesidad de Tipo 1")
