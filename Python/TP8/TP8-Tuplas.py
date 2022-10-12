@@ -10,6 +10,10 @@ def showlasig(asignaturas):
 
 def p_asig():
     asignaturas = ("Matematicas","Fisica","Quimica","Historia","Lengua")
+    try: 
+        asignaturas[1] = "Biologia"
+    except:
+        print("Es una tupla no se puede entrar mas valores! ")
     showlasig(asignaturas)
 
 p_asig()
