@@ -3,7 +3,7 @@ Ejercicio 10: Escribir una función sum() y una función multip() que sumen y mu
 respectivamente todos los números de una lista aleatoria. Por ejemplo: sum([1,2,3,4]) 
 debería devolver 10 y multip([1,2,3,4]) debería devolver 24.
 """
-from random import randint, random, seed
+from random import  random, seed
 
 
 def sum(lst):
