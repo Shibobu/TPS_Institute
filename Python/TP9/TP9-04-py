@@ -33,7 +33,7 @@ def par_Impar():
         num = ing_opc("Ingrese un numero entero\nO ingrese 0 para salir del programa: ")
 
         if num == 0:
-            b = 1
+            break
 
         aux = num
         while aux > 0 and not b:
