@@ -1,0 +1,54 @@
+"""
+Ejercicio 4: Crear una función que solicite el ingreso de números enteros positivos, hasta
+que el usuario ingrese el 0. Por cada número, informar cuántos dígitos pares y cuántos
+impares tiene. Al finalizar, informar la cantidad de dígitos pares y de dígitos impares
+leídos en total.
+"""
+
+from math import trunc
+
+def ing_opc(arg):
+    try: 
+        x = int(input(arg))
+        if x < 0:
+            print("Deben ser numeros enteros positivos: ")
+            return -1
+        return x
+    except: 
+        print("Error de ingreso, ingrese nuevamente:")
+        return -1
+
+def dig(num):
+    d = num % 10
+    num /= 10
+    return trunc(num),d
+
+def par_Impar():
+    pares = 0
+    impares = 0
+    b = 0
+    while not b:
+        p= 0
+        i= 0
+        num = ing_opc("Ingrese un numero entero\nO ingrese 0 para salir del programa: ")
+
+        if num == 0:
+            b = 1
+
+        aux = num
+        while aux > 0 and not b:
+            aux,d = dig(aux)
+            if d % 2 == 0:
+                p += 1
+            else : i+=1
+
+        print("La cantidad de digitos pares del numero {n} es: {par} \n".format(n=num,par=p)
+            +"La cantidad de digitos impares del numero {n} es: {impar}\n".format(n= num, impar=i))
+        pares += p
+        impares +=1
+
+    print("El total de digitos pares es: ",pares)
+    print("El total de digitos inpares es: ",impares)
+
+par_Impar()        
+    
