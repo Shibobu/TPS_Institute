@@ -34,7 +34,8 @@ def par_Impar():
 
         if num == 0:
             break
-
+        if num < 0:
+            continue
         aux = num
         while aux > 0 and not b:
             aux,d = dig(aux)
@@ -45,7 +46,7 @@ def par_Impar():
         print("La cantidad de digitos pares del numero {n} es: {par} \n".format(n=num,par=p)
             +"La cantidad de digitos impares del numero {n} es: {impar}\n".format(n= num, impar=i))
         pares += p
-        impares +=1
+        impares += i
 
     print("El total de digitos pares es: ",pares)
     print("El total de digitos inpares es: ",impares)
