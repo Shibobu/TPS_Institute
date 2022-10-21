@@ -5,22 +5,21 @@ solicitará una y otra vez las cantidades que se irán ahorrando, hasta que el t
 ahorrado iguale y no supere al objetivo.
 """
 # Controla el ingreso sea dinero y el objetivo y los depositos no sea negativos
-def ing_input(arg):
-    try: 
-        x = float(input(arg))
-        if x < 0:
-            ing_input("Monto erroneo, ingrese un monto correcto: ")
-        return x
-    except:
-        ing_input("Error de Datos, ingrese un monto correcto: ")
+
 
 #Setea el objetivo
+from Python.TP9.Mylibrary import ing_float
+
+def ing_floatpox(arg):
+    x = ing_float(arg)
+    if x < 0:
+        ing_floatpox("Solo datos positivos, ingrese nuevamente: ")
 def set_obj():
-    return ing_input("Ingrese el monto objetivo de ahorro $")
+    ing_float("Ingrese el monto objetivo de ahorro $")
 
 #Registra los depositos
 def depositos():
-    return ing_input("Deposita $")
+    return ing_float("Deposita $")
 
 def caja_Ahorro():
     obj = set_obj()
