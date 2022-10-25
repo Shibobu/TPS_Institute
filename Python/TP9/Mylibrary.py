@@ -20,11 +20,3 @@ def ing_float(arg:str):
     except:
         print("Error de ingreso, Dato Erroneo")
         return ing_int("Ingrese nuevamente: ")
-
-def divdig(num:int):
-    """Retrorna el numero modificado y una lista de digitos"""
-    d = []
-    while num > 0:  
-        d.append(num % 10)
-        num = trunc(num/10)
-    return d

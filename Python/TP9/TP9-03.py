@@ -7,13 +7,12 @@ opciones 1 ó 2 se imprimirá un texto cualquiera. Si elige la opción 3, se int
 impresión del menú y el programa finalizará.
 """
 
+from Mylibrary import ing_int
+
+
 def ing_opc(arg):
-    try: 
-        x = int(input(arg))
-        return x
-    except: 
-        print("Error de ingreso, ingrese nuevamente:")
-        return 0
+    x = ing_int(arg)
+    return x
 
 def menu():
     print("Seleccione una opcion: \n"

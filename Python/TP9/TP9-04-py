@@ -7,16 +7,11 @@ leídos en total.
 
 from math import trunc
 
+from Mylibrary import ing_int
+
 def ing_opc(arg):
-    try: 
-        x = int(input(arg))
-        if x < 0:
-            print("Deben ser numeros enteros positivos: ")
-            return -1
-        return x
-    except: 
-        print("Error de ingreso, ingrese nuevamente:")
-        return -1
+   x= ing_int(arg)
+   return x
 
 def dig(num):
     d = num % 10
@@ -41,8 +36,7 @@ def dig_par_impar(num):
 def par_Impar():
     pares = 0
     impares = 0
-    b = 0
-    while not b:
+    while True:
         p= 0
         i= 0
         num = ing_opc("Ingrese un numero entero\nO ingrese 0 para salir del programa: ")
@@ -54,9 +48,9 @@ def par_Impar():
         p,i = dig_par_impar(num)
         pares += p
         impares += i
-
     print("El total de digitos pares es: ",pares)
     print("El total de digitos inpares es: ",impares)
 
-par_Impar()        
+if __name__ == "__main__":
+    par_Impar()        
     
