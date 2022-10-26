@@ -30,10 +30,18 @@ def compFech(dd,mm,aaaa):
     return False
         
 def fecha():
+    meses = {1 : "Enero",2 : "Febrero",
+             3 : "Marzo",4 : "Abril",
+             5 : "Mayo", 6 : "Junio",
+             7 : "Julio", 8 : "Agosto",
+             9 : "Septiembre", 10 : "Octubre",
+             11 : "Noviembre", 12 : "Diciembre"}
     try:
         dd,mm,aaaa = int(ing_str("Ingrese una fecha en el formato dd/mm/aaaa").split("/"))
-        if compFech(dd,mm,aaaa):
-            
+        if not compFech(dd,mm,aaaa):
+            print("La Fecha ingresada es una fecha inexistente")
+        else:
+            print("La fecha es: {d} de {m} del año {a}".format(d = dd, m = mm , a = aaaa))
     except: 
         print("Debe ingresar si o si en el formato dd/mm/aaaa")
         
