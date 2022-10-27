@@ -19,6 +19,3 @@ def p_Ejercicio2():
         e = persona["edad"],
         d = persona["direccion"],
         t = persona["telefono"]))
-
-if __name__ == "__main__":
-    p_Ejercicio2()
