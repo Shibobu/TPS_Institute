@@ -29,16 +29,33 @@ d=”Hola”  suma(a+b) tiene que resultar 15
  division(a/c) tiene que resultar Error_de_Tipos
 """
 
+from Mylibrary import *
 from operaciones import *
 
+def menu():
+    print("-----------Ingrese una opcion:\n " +
+        "1) ------ Sumar\n" + " 2) ------ Resta\n" +
+        "3) ------ Multiplicar\n" + "4) ------ Dividir\n"+
+        "5)------- Salir")
+    return ing_int("Ingrese una opcion: ")
 
 if __name__ == "__main__":
-    a = 10
-    b = 5
-    c = 0
-    d = "Hola"
-    
-    print (suma(a,b))
-    print (resta(a,b))
-    print(division(a,b))
-    print (multip(a,d))
+    a = ing_float("Ingrese un valor: ")
+    b = ing_float("Ingrese un segundo valor: ")
+    while True:
+        
+        op = menu()
+        match op:
+            case 1:
+                print(suma(a,b))
+            case 2:
+                print(resta(a,b))
+            case 3:
+                print(multip(a,b))
+            case 4:
+                print(division(a,b))
+            case 5:
+                print("Salir")
+                break
+        a = ing_float("Ingrese un valor: ")
+        b = ing_float("Ingrese un segundo valor: ")
