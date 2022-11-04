@@ -9,3 +9,17 @@ DNI:26452458, Nombre: Jesús González, Dirección: Alvarado 850, Teléfono:
 387585698, Correo Electrónico: ingjesusgonzalez@yahoo.com.ar
 DNI:3659874, Nombre:………….., Dirección:…………..
 """
+import csv
+
+def opCSV(filename, mode):
+    with open(filename,mode) as csvFile:
+
+        entrada = list(csv.DictReader(csvFile,delimiter= ';'))
+
+    csvFile.close()
+    return entrada
+
+if __name__ == "__main__":
+    ls = opCSV('Python\TP13\data\\a.csv','r')
+    
+    
