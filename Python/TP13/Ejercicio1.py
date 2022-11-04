@@ -10,6 +10,7 @@ DNI:26452458, Nombre: Jesús González, Dirección: Alvarado 850, Teléfono:
 DNI:3659874, Nombre:………….., Dirección:…………..
 """
 import csv
+from lib2to3.pgen2.token import NAME
 
 def opCSV(filename, mode):
     with open(filename,mode) as csvFile:
@@ -19,7 +20,22 @@ def opCSV(filename, mode):
     csvFile.close()
     return entrada
 
+def get_colNames():
+    
+    return "DNI,NOMBRE,APELLIDO,DIRECCION,TELEFONO,CORREO TELEFONICO"
+
 if __name__ == "__main__":
     ls = opCSV('Python\TP13\data\\a.csv','r')
-    
+    cNames = get_colNames().split(',')
+
+    for i in ls:
+        print(i)
+    """  for j in ls:
+        print("\n")
+        for i in cNames:
+        
+            print("||",j[i],"||", end=" ")
+        """
+    #print(ls)
+    #print(cNames)
     
