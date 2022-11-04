@@ -11,3 +11,10 @@ un archivo en formato txt denominado resumen.txt en donde deberá decir en la pr
 línea “Resumen de Notas Primer Parcial Programación II”, además de los resultados de 
 la mínima, la máxima y el promedio de notas de todos los alumnos.
 """
+
+import ListaAlumnos
+
+
+if __name__ == "__main__":
+    ListaAlumnos.ing_alumn()
+    ListaAlumnos.createCSV('calificaciones.csv','w')
