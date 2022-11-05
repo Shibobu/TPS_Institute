@@ -1,0 +1,101 @@
+Resumen Notas Primer Parcial Programacion II: 
+ 
+1º Alumno: 
+DNI : 1
+NOMBRE : 1
+APELLIDO : 1
+TELEFONO : 1
+CORREO : 1
+NOTA : 5
+ 
+2º Alumno: 
+DNI : 2
+NOMBRE : 2
+APELLIDO : 2
+TELEFONO : 2
+CORREO : 2
+NOTA : 10
+ 
+3º Alumno: 
+DNI : 3
+NOMBRE : 3
+APELLIDO : 3
+TELEFONO : 3
+CORREO : 3
+NOTA : 3
+ 
+4º Alumno: 
+DNI : 4
+NOMBRE : 4
+APELLIDO : 4
+TELEFONO : 4
+CORREO : 4
+NOTA : 7
+ 
+5º Alumno: 
+DNI : 5
+NOMBRE : 5
+APELLIDO : 5
+TELEFONO : 55
+CORREO : 5
+NOTA : 4
+ 
+6º Alumno: 
+DNI : 6
+NOMBRE : 6
+APELLIDO : 6
+TELEFONO : 6
+CORREO : 6
+NOTA : 8
+ 
+7º Alumno: 
+DNI : 7
+NOMBRE : 7
+APELLIDO : 7
+TELEFONO : 7
+CORREO : 7
+NOTA : 7
+ 
+8º Alumno: 
+DNI : 8
+NOMBRE : 
+APELLIDO : 8
+TELEFONO : 8
+CORREO : 8
+NOTA : 1
+ 
+9º Alumno: 
+DNI : 9
+NOMBRE : 9
+APELLIDO : 9
+TELEFONO : 9
+CORREO : 9
+NOTA : 1
+ 
+10º Alumno: 
+DNI : 10
+NOMBRE : 10
+APELLIDO : 10
+TELEFONO : 10
+CORREO : 10
+NOTA : 2
+ 
+11º Alumno: 
+DNI : 11
+NOMBRE : 11
+APELLIDO : 11
+TELEFONO : 11
+CORREO : 11
+NOTA : 3
+ 
+12º Alumno: 
+DNI : 12
+NOMBRE : 12
+APELLIDO : 121
+TELEFONO : 12
+CORREO : 12
+NOTA : 2
+ 
+Minima : 1
+Maxima : 10
+Promedio de las notas de todos los alumnos: 4.416666666666667

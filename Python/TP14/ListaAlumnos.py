@@ -17,8 +17,6 @@ def ing_alumn():
         if len(alumnos)>= 10 and not askWTC("Desea seguir ingresando?\n Y/y para si\n N/n para no\n Ingrese Y/y o N/n: "):
             break
     
-def show_alum(inx):
-    print(show_alum(alumnos[inx]))
 
 def createCSV(filename,state):
 
@@ -30,16 +28,13 @@ def createCSV(filename,state):
         archive.writeheader()
 
         archive.writerows(alumnos)
+    file.close()
 
-def confExist(dni):
-    ini = 0
-    fin = len(alumnos)
-    m = (ini + fin)/2
-    while ini < fin & comp_exist(alumnos[m]['DNI'],dni) != 0:
-        if comp_exist(alumnos[m]['DNI'],dni) > 0:
-            ini = m+1
-        if comp_exist(alumnos[m]['DNI'],dni) < 0:
-            fin = m-1
+def openCSV(filename,state):
     
-    return m if ini < fin else -1
+    with open(filename,state) as file:
 
+        ent = list(csv.DictReader(file,delimiter=','))
+    file.close()
+
+    return ent

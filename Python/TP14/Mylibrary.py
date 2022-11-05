@@ -24,6 +24,7 @@ def ing_float(arg:str):
 def ing_str(arg):
     return str(input(arg))
 
+
 def ing_floatpox(arg):
     x = ing_float(arg)
     return x if x >= 0 else ing_floatpox("No se aceptan datos negativos, ingrese nuevamente")
