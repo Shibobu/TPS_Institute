@@ -2,8 +2,6 @@
 Toma los modulos mas comunes para resolver el problema
 """
 
-from math import trunc
-
 
 def ing_int(arg:str):
     try:
